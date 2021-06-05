@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/himerometra",
   flags: {
     DEV_SSR: false,
   },
