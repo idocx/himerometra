@@ -1,8 +1,5 @@
 module.exports = {
-  pathPrefix: "/himerometra",
-  flags: {
-    DEV_SSR: false,
-  },
+  pathPrefix: process.env.PATH_PREFIX ? process.env.PATH_PREFIX : "/",
   siteMetadata: {
     title: `Yuxing Fei - Personal Page`,
     author: `Yuxing Fei`
