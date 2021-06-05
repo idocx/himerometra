@@ -4,6 +4,11 @@ import styled from 'styled-components';
 import HeaderMenu from './HeaderMenu';
 import { Link } from 'gatsby';
 import { SiderContainer, SiderContainerCollapsed } from './SiderContainer';
+import Halmet from 'react-helmet';
+import favicon from '../images/favicon.svg';
+import appleTouchIcon from '../images/apple-touch-icon.png';
+import faviconMask from '../images/favicon-mask.svg';
+
 import 'antd/dist/antd.css';
 import './layout.css';
 
@@ -147,6 +152,31 @@ const StyledLayoutAntd = styled(LayoutAntd)`
 function Layout({ children, hasSider, current }) {
   return (
       <StyledLayoutAntd>
+        <Halmet>
+          <title>Yuxing Fei - Personal Website</title>
+        </Halmet>
+        <Halmet>
+          <link rel="icon" href={favicon} />
+        </Halmet>
+        <Halmet>
+          <link rel="mask-icon" href={faviconMask} color="#000000" />
+        </Halmet>
+        <Halmet>
+          <link rel="apple-touch-icon" href={appleTouchIcon} />
+        </Halmet>
+        <Halmet>
+          <meta charset="utf-8" />
+        </Halmet>
+        <Halmet>
+          <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        </Halmet>
+        <Halmet>
+          <meta name="keywords" content="Personal Page, Yuxing Fei, Graduate Student, Academic, Automatic Synthesis, Material Science" />
+        </Halmet>
+        <Halmet>
+          <meta name="subject" content="personal web page" />
+        </Halmet>
+
         <Header current={current}></Header>
         <BackTop />
         <StyledLayoutAntd className='main-container' style={{ minHeight: '75vh'}}>

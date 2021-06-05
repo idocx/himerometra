@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from '../components/Layout';
 import 'github-markdown-css/github-markdown.css';
 
+
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
