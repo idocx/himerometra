@@ -21,12 +21,13 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 500,
+              maxWidth: 590,
             },
           },        
         ],
       },
     },          
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
