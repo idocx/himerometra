@@ -9,8 +9,8 @@ const MarkdownContainer = styled.div`
     border-bottom: none;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    padding-bottom: 8px;
+  .center {
+    text-align: center;
   }
 `;
 
@@ -18,7 +18,7 @@ export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout current={frontmatter.name} hasSider={frontmatter.hasSider}>
+    <Layout current={frontmatter.name} hasSider={frontmatter.hasSider} title={frontmatter.title}>
       <MarkdownContainer
         className="markdown-body markdown-container"
         dangerouslySetInnerHTML={{ __html: html }}
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
         slug
         hasSider
         name
+        title
       }
     }
   }

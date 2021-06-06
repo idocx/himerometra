@@ -26,9 +26,11 @@ function Header({ current }) {
     <HeaderAntd>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Link className='page-title' to='/' style={{ color: 'inherit' }}>
-          <h1 className='page-title-text' style={{ marginBottom: 0, fontSize: '1.25rem' }}>
-            Yuxing Fei's Personal Page
-          </h1>
+          <div className='page-title-text' 
+            style={{ fontWeight: 500, marginBottom: 0, fontSize: '1.25rem' }}
+          >
+            Yuxing Fei's Personal Page (Beta Version)
+          </div>
         </Link>
         <HeaderMenu current={current}></HeaderMenu>
       </div>
@@ -149,11 +151,11 @@ const StyledLayoutAntd = styled(LayoutAntd)`
   }
 `;
 
-function Layout({ children, hasSider, current }) {
+function Layout({ children, hasSider, current, title }) {
   return (
       <StyledLayoutAntd>
         <Halmet>
-          <title>Yuxing Fei - Personal Website</title>
+          <title>{title ? `${title} | `: ""}Yuxing Fei - Personal Website</title>
         </Halmet>
         <Halmet>
           <link rel="icon" href={favicon} />

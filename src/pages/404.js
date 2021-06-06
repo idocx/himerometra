@@ -26,7 +26,7 @@ const NotFoundContainer = styled.div`
 
 function NoFoundPage() {
   return (
-    <Layout current='404' hasSider={false}>
+    <Layout current='404' hasSider={false} title="Not Found">
       <NotFoundContainer className='not-found'>
         <div className='not-found-code'>
           404

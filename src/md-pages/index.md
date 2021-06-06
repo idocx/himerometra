@@ -2,7 +2,17 @@
 slug: "/"
 name: "home"
 hasSider: true
+title: ""
 ---
+
+```python
+import torch
+import torch.nn as nn
+
+class Net(nn.Module):
+    def __init__(self):
+        self.dense = nn.Linear(10, 1)
+```
 
 # h1 Heading 8-)
 ## h2 Heading

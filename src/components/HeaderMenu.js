@@ -2,7 +2,6 @@ import { Menu } from 'antd';
 import styled from 'styled-components';
 import { useState } from 'react';
 import { Link } from 'gatsby';
-import yuxing_cv from '../pdf/yuxing_cv.pdf';
 import React from 'react';
 
 const StyledMenu = styled(Menu)`
@@ -13,9 +12,7 @@ function HeaderMenu({ current }) {
   const [ selected_key, set_selected_key ] = useState(current);
 
   const handleSelect = ({ key }) => {
-    if (key !== 'cv') {
-      set_selected_key(key);
-    }
+    set_selected_key(key);
   };
   return (
     <StyledMenu mode='horizontal' 
@@ -30,7 +27,7 @@ function HeaderMenu({ current }) {
         <Link to='/publications/'>Publications</Link>
       </Menu.Item>
       <Menu.Item key='cv' title='CV'>
-        <a href={yuxing_cv}>CV</a>
+        <a href='/yuxing_cv.pdf'>CV</a>
       </Menu.Item>
     </StyledMenu>
   )

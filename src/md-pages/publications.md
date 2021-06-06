@@ -2,6 +2,7 @@
 slug: "/publications"
 name: "publications"
 hasSider: false
+title: "Publications"
 ---
 
 # h1 Heading 8-)
