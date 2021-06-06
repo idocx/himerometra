@@ -26,11 +26,11 @@ function Header({ current }) {
     <HeaderAntd>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Link className='page-title' to='/' style={{ color: 'inherit' }}>
-          <div className='page-title-text' 
-            style={{ fontWeight: 500, marginBottom: 0, fontSize: '1.25rem' }}
+          <h1 className='page-title-text' 
+            style={{ marginBottom: 0, fontSize: '1.25rem' }}
           >
-            Yuxing Fei's Personal Page (Beta Version)
-          </div>
+            Yuxing Fei's Personal Page
+          </h1>
         </Link>
         <HeaderMenu current={current}></HeaderMenu>
       </div>
@@ -146,7 +146,7 @@ const StyledLayoutAntd = styled(LayoutAntd)`
     }
   
     .sider-container-collapsed {
-      display: flex !important;
+      display: block !important;
     }
   }
 `;

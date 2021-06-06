@@ -12,7 +12,9 @@ function HeaderMenu({ current }) {
   const [ selected_key, set_selected_key ] = useState(current);
 
   const handleSelect = ({ key }) => {
-    set_selected_key(key);
+    if (key !== 'cv') {
+      set_selected_key(key);
+    }
   };
   return (
     <StyledMenu mode='horizontal' 
@@ -22,9 +24,6 @@ function HeaderMenu({ current }) {
     >
       <Menu.Item key='home' title='Home'>
         <Link to='/'>Home</Link>
-      </Menu.Item>
-      <Menu.Item key='publications' title='Publications'>
-        <Link to='/publications/'>Publications</Link>
       </Menu.Item>
       <Menu.Item key='cv' title='CV'>
         <a href='/yuxing_cv.pdf'>CV</a>

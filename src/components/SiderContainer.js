@@ -69,7 +69,7 @@ function SiderContainer() {
 
       <div className='profiles'>
         <h1 style={{ fontSize: '1.6em' }}>
-          Yuxing Fei (费宇星)
+          Yuxing Fei (<span className='zh-cn'>费宇星</span>)
         </h1>
         <h3 style={{ fontSize: '1.2em' }}>
           Ph.D. student (1st year)
@@ -116,8 +116,8 @@ function SiderContainer() {
 
 function SiderContainerCollapsed() {
   return (
-    <>
-      <SiderDivCollapsed className='sider-container-collapsed'>
+    <div className='sider-container-collapsed'>
+      <SiderDivCollapsed>
         <div className='avatar-small' style={{ margin: '8px 16px' }}>
           <img 
             id='photo-small' 
@@ -126,8 +126,8 @@ function SiderContainerCollapsed() {
           />
         </div>
         <div className='short-info'>
-          <div className='name' style={{ fontSize: '1.5rem', fontWeight: 500 }}>
-            Yuxing Fei (费宇星)
+          <div className='name' style={{ fontSize: '1.2rem', fontWeight: 500 }}>
+            Yuxing Fei (<span className='zh-cn'>费宇星</span>)
           </div>
           <div className='short-description'>
             Ph.D. student @ Department of Material Science and Engineering, UC Berkeley
@@ -135,7 +135,7 @@ function SiderContainerCollapsed() {
         </div>
       </SiderDivCollapsed>
       <Divider />
-    </>
+    </div>
   )
 }
 

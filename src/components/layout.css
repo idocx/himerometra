@@ -2,6 +2,11 @@ html {
   font-size: 16px;
 }
 
+@font-face {
+  font-family: "simkai";
+  src: url(./simkai.woff);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,10 +18,15 @@ body {
   margin: auto;
 }
 
+.zh-cn {
+  font-family: 'simkai';
+  font-weight: 600;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-@media(max-width:540px){ html { font-size:calc(12px + 4 * ((100vw - 414px) / 126));; } }
-@media(max-width:360px){ html { font-size:12px; } } 
+@media(max-width:540px){ html { font-size:calc(14px + 2 * ((100vw - 414px) / 126));; } }
+@media(max-width:360px){ html { font-size:14px; } } 
