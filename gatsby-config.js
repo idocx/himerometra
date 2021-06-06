@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
+        name: `md-pages`,
         path: `${__dirname}/src/md-pages/`,
       },
     },
@@ -19,15 +19,14 @@ module.exports = {
         gfm: true,
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              maxWidth: 590,
+              ignoreFileExtensions: []
             },
-          },        
+          },
         ],
       },
     },          
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,

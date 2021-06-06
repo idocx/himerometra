@@ -19,7 +19,7 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout current={frontmatter.name} hasSider={frontmatter.hasSider}>
-      <div
+      <MarkdownContainer
         className="markdown-body markdown-container"
         dangerouslySetInnerHTML={{ __html: html }}
       />

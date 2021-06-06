@@ -5,4 +5,4 @@ hasSider: true
 ---
 
 # Index
-![](../images/photo.jpg)
+![](../images/2.jpg)
