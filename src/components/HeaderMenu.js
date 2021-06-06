@@ -26,7 +26,7 @@ function HeaderMenu({ current }) {
         <Link to='/'>Home</Link>
       </Menu.Item>
       <Menu.Item key='cv' title='CV'>
-        <a href='/yuxing_cv.pdf'>CV</a>
+        <Link to='/yuxing_cv.pdf'>CV</Link>
       </Menu.Item>
     </StyledMenu>
   )
