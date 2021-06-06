@@ -15,14 +15,22 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        footnotes: false,
+        footnotes: true,
         gfm: true,
         plugins: [
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
+              destinationDir: f => `static/${f.name}-${f.hash}`,
               ignoreFileExtensions: []
             },
+          },
+          {
+            resolve: 'gatsby-remark-emoji',
+            options: {
+              emojiConversion: 'shortnameToUnicode',
+              ascii: true,
+            }
           },
         ],
       },
