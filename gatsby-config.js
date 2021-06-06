@@ -17,7 +17,14 @@ module.exports = {
       options: {
         footnotes: false,
         gfm: true,
-        plugins: [],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+            },
+          },        
+        ],
       },
     },          
     `gatsby-plugin-react-helmet`,
