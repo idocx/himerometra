@@ -5,9 +5,7 @@ Himerometra is a fast and responsive academic page made by ReactJS, Gatsby and A
 
 Also, Himerometra is also a genus of species that live in the shallow sea. Its Chinese name is "海羽星".
 
-<div style="text-align: center">
-  <img src="docs/himerometra.jpg" alt="Himerometra Robustipinna" width="400px" style="max-width: 100%"></img>
-</div>
+<img src="docs/himerometra.jpg" alt="Himerometra Robustipinna" align="center" width="400px" style="max-width: 100%"></img>
 <p align="center">Himerometra Robustipinna</p>
 
 ## Demo
