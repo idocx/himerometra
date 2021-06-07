@@ -1,54 +1,101 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Himerometra
+[![Netlify Status](https://api.netlify.com/api/v1/badges/635d2aec-397f-461a-8bc6-32a4894c6f66/deploy-status)](https://app.netlify.com/sites/epic-wing-c7f1a2/deploys)
 
-## 🚀 Quick start
+Himerometra is a fast and responsive academic page made by ReactJS, Gatsby and Ant Design UI Libiary. It makes it easy to update the website as it supports *Markdown* to make web content.
 
-1.  **Create a Gatsby site.**
+Also, Himerometra is also a genus of species that live in the shallow sea. Its Chinese name is "海羽星".
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+<div style="text-align: center">
+  <img src="docs/himerometra.jpg" alt="Himerometra Robustipinna" style="width: 400px; max-width: 100%"></img>
+</div>
+<p style="text-align: center;">Himerometra Robustipinna</p>
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Demo
+[https://yuxingfei.com](https://yuxingfei.com)
 
-2.  **Start developing.**
+## Installation
+### Prerequisites
+You should install `npm` in advance. Refer to [Official NPM Installation Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for more info.
 
-    Navigate into your new site’s directory and start it up.
+### Install develop dependencies
+To set up the dev env, you need to first clone the repo to your PC and then install all the packages used in this project.
+```bash
+git clone https://github.com/idocx/himerometra 
+cd himerometra
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+# use 'npm install' to install all the dependencies
+npm install
+```
 
-3.  **Open the code and start customizing!**
+#### Use npm mirror
+For Chinese developers, you may find it slow to download the dependencies. You can use `Taobao`'s npm mirror insead.
+```bash
+npm config set registry https://registry.npm.taobao.org
+npm config get registry
+```
 
-    Your site is now running at http://localhost:8000!
+### Launch dev server
+If you want to develop locally, you can launch a dev server with
+```bash
+npm run develop
+```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+### Build locally
+We setup a github action for continuous integration. But if you want to build locally, use npm command
+```bash
+npm run build
+```
 
-4.  **Learn more**
+#### Relative Path Issue
+By default, the site is assumed to serve in the root path. If not, you should specify a basename manually. Himerometra can read basename from environment variable. To build, just run
+```bash
+PATH_PREFIX='/<Your Basename>' && npm run build --prefix-paths
+```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Add new pages
+### Markdown Page
+All the markdown pages are stored in [`src/md-pages`](src/md-pages).
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+You can just create a new `.md` file to make a new page. The new page should have following format
+```
+---
+slug: "<the path relative to root for this page>"
+name: "<the name you used as key attribute in header menu>"
+hasSider: <Boolean, whether to add sider component to this page>
+title: "<this will be added to the page's title>"
+---
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<!-- Remember: If you want to add hyperlinks to markdown file, use relative path without './' or '../'-->
+<Your markdown content goes here>
+```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### HTML page
+You can also use html to write the page. All the html page are stored in [`src/pages`](src/pages) in `.js` file.
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```js
+import React from 'react;'
+import Layout from '../components/Layout';
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+function YourCustomPage() {
+  return (
+    <Layout current='<the value you used as key in header menu>' hasSider={"<Boolean, whether to include sider component>"} title="<the title of this page, which will be added to the page's title>">
+      {"<Your React content goes here>"}
+    </Layout>
+  )
+}
 
-## 🚀 Quick start (Gatsby Cloud)
+export default YourCustomPage;
+```
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+## Add new pages to header menu
+To show the new page in the header menu, you should also modify the [`src/components`](src/components).
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Add a `<Menu.Item />` to `<StyledMenu />` component.
+```html
+<StyledMenu>
+  ...
+  <Menu.Item key='<name>' title='<Display Name>'>
+    <Link to='<path/slug>'>Home</Link>
+  </Menu.Item>
+</StyledMenu>
+```

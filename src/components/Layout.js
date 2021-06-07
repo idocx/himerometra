@@ -55,9 +55,9 @@ function Footer() {
       <FooterAntd
         style={{ textAlign: 'center', color: 'rgba(0, 0, 0, 0.7)', fontSize: '0.9em' }}
       >
-        Run with <a href='https://github.com/idocx/himerometra' target='_blank' rel="noreferrer">
+        Powered by <a href='https://github.com/idocx/himerometra' target='_blank' rel="noreferrer">
           Himerometra
-        </a> by Yuxing. Icons made by <a href="https://www.freepik.com" title="Freepik">
+        </a>. Icons made by <a href="https://www.freepik.com" title="Freepik">
           Freepik
         </a> from <a href="https://www.flaticon.com/" title="Flaticon">FlatIcon</a>
       </FooterAntd>

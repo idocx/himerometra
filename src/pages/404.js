@@ -32,7 +32,7 @@ function NoFoundPage() {
           404
         </div>
         <div className='not-found-info'>
-          Path not found on this site
+          Page not found on this site
         </div>
       </NotFoundContainer>
     </Layout>
