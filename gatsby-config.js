@@ -1,5 +1,7 @@
+const pathPrefix = process.env.PATH_PREFIX ? process.env.PATH_PREFIX : "/";
+
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX ? process.env.PATH_PREFIX : "/",
+  pathPrefix: pathPrefix,
   siteMetadata: {
     title: `Yuxing Fei - Personal Page`,
     author: `Yuxing Fei`
