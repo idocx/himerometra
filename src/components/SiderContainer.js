@@ -1,5 +1,4 @@
 import React from 'react';
-import photo from '../images/photo.jpg'
 import { GithubOutlined, LinkedinFilled } from '@ant-design/icons'; 
 import { StaticImage } from "gatsby-plugin-image"
 import { Tooltip, Divider } from 'antd';
@@ -64,7 +63,7 @@ function SiderContainer() {
           placeholder="blurred"
           layout="constrained"
           weight="80%"
-          src={photo} 
+          src="../images/photo.jpg" 
           alt='avatar' 
         />
       </div>
@@ -124,7 +123,7 @@ function SiderContainerCollapsed() {
           <StaticImage 
             id='photo-small'
             placeholder="blurred"
-            src={photo}
+            src="../images/photo.jpg" 
             layout="fixed"
             width="72px"
             alt='avatar' 
