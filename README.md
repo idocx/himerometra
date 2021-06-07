@@ -76,7 +76,11 @@ import Layout from '../components/Layout';
 
 function YourCustomPage() {
   return (
-    <Layout current='<the value you used as key in header menu>' hasSider={"<Boolean, whether to include sider component>"} title="<the title of this page, which will be added to the page's title>">
+    <Layout 
+      current='<the value you used as key in header menu>' 
+      hasSider={"<Boolean, whether to include sider component>"} 
+      title="<the title of this page, which will be added to the page's title>"
+    >
       {"<Your React content goes here>"}
     </Layout>
   )
@@ -92,7 +96,9 @@ Add a `<Menu.Item />` to `<StyledMenu />` component.
 ```html
 <StyledMenu>
   ...
-  <Menu.Item key='<name>' title='<Display Name>'>
+  <Menu.Item key='<name>' 
+    title='<Display Name>'
+  >
     <Link to='<path/slug>'>Home</Link>
   </Menu.Item>
 </StyledMenu>
