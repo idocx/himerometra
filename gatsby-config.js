@@ -48,5 +48,7 @@ module.exports = {
         anonymize: true,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
   ]
 }
