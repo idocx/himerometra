@@ -1,6 +1,6 @@
 import React from 'react';
+import photo from '../images/photo.jpg'
 import { GithubOutlined, LinkedinFilled } from '@ant-design/icons'; 
-import { StaticImage } from "gatsby-plugin-image"
 import { Tooltip, Divider } from 'antd';
 import styled from 'styled-components';
 
@@ -38,6 +38,7 @@ const SiderDiv = styled.div`
   }
 
   #photo {
+    width: 80%;
     border-radius: 50%;
   }
 `;
@@ -49,6 +50,7 @@ const SiderDivCollapsed = styled.div`
   align-items: center;
 
   #photo-small {
+    width: 72px;
     border-radius: 50%;
     border: 2px #cacaca solid;
   }
@@ -58,12 +60,9 @@ function SiderContainer() {
   return (
     <SiderDiv className='sider-container'>
       <div className='avatar' style={{ textAlign: 'center' }}>
-        <StaticImage 
+        <img 
           id='photo'
-          placeholder="blurred"
-          layout="constrained"
-          weight="80%"
-          src="../images/photo.jpg" 
+          src={photo} 
           alt='avatar' 
         />
       </div>
@@ -120,12 +119,9 @@ function SiderContainerCollapsed() {
     <div className='sider-container-collapsed'>
       <SiderDivCollapsed>
         <div className='avatar-small' style={{ margin: '8px 16px' }}>
-          <StaticImage 
-            id='photo-small'
-            placeholder="blurred"
-            src="../images/photo.jpg" 
-            layout="fixed"
-            width="72px"
+          <img 
+            id='photo-small' 
+            src={photo} 
             alt='avatar' 
           />
         </div>
