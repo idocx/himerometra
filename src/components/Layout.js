@@ -64,8 +64,9 @@ function Footer() {
   )
 }
 
-const StyledLayoutAntd = styled(LayoutAntd)`
+const LayoutContainer = styled(LayoutAntd)`
   background: #fff;
+  min-height: 100vh;
 
   .ant-layout-header {
     padding: 0 48px;
@@ -117,10 +118,6 @@ const StyledLayoutAntd = styled(LayoutAntd)`
       flex-direction: column !important;
     }
 
-    .page-title {
-      display: none;
-    }
-
     .ant-layout-header {
       padding: 0 24px;
     }
@@ -149,11 +146,22 @@ const StyledLayoutAntd = styled(LayoutAntd)`
       display: block !important;
     }
   }
+
+  @media (max-width: 568px) {
+    .page-title {
+      display: none;
+    }
+  }
+`;
+
+const ContentContainer = styled(LayoutAntd)`
+  background: #fff;
+  flex: 1 0 auto;
 `;
 
 function Layout({ children, hasSider, current, title }) {
   return (
-      <StyledLayoutAntd>
+      <LayoutContainer className="layout-container">
         <Halmet>
           <title>{title ? `${title} | `: ""}Yuxing Fei - Personal Website</title>
         </Halmet>
@@ -181,14 +189,14 @@ function Layout({ children, hasSider, current, title }) {
 
         <Header current={current}></Header>
         <BackTop />
-        <StyledLayoutAntd className='main-container' style={{ minHeight: '75vh'}}>
+        <ContentContainer className='main-container'>
           {hasSider ? <Sider /> : null}
           <ContentAntd>
             {children}
           </ContentAntd>
-        </StyledLayoutAntd>
+        </ContentContainer>
         <Footer></Footer>
-      </StyledLayoutAntd>
+      </LayoutContainer>
   )
 }
 

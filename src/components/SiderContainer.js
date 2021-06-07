@@ -59,7 +59,7 @@ const SiderDivCollapsed = styled.div`
 function SiderContainer() {
   return (
     <SiderDiv className='sider-container'>
-      <div className='avatar' style={{ textAlign: 'center' }}>
+      <div className='avatar'>
         <img 
           id='photo'
           src={photo} 
