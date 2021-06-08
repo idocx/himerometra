@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../images/photo.jpg'
+import photo from '../images/photo.webp'
 import { GithubOutlined, LinkedinFilled } from '@ant-design/icons'; 
 import { Tooltip, Divider } from 'antd';
 import styled from 'styled-components';
@@ -38,6 +38,7 @@ const SiderDiv = styled.div`
   }
 
   #photo {
+    height: auto;
     width: 80%;
     border-radius: 50%;
   }
@@ -64,6 +65,8 @@ function SiderContainer() {
           id='photo'
           src={photo} 
           alt='avatar' 
+          width="200"
+          height="200"
         />
       </div>
 
@@ -122,6 +125,8 @@ function SiderContainerCollapsed() {
           <img 
             id='photo-small' 
             src={photo} 
+            width="72"
+            height="72"
             alt='avatar' 
           />
         </div>
