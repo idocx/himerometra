@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from "gatsby"
-import Layout from '../components/Layout';
+import Layout, { BREAK_POINT } from '../components/Layout';
 import 'github-markdown-css/github-markdown.css';
 import styled from 'styled-components';
 
@@ -14,6 +14,22 @@ const MarkdownContainer = styled.div`
   .center {
     text-align: center;
   }
+
+  @media (max-width: ${BREAK_POINT}px) {
+    & {
+      font-size: 1.1em;
+    }
+
+    p {
+      line-height: 140%;
+      margin-bottom: 8px;
+    }
+
+    h1, h2 {
+      border-bottom: none;
+      padding-bottom: 0.1em;
+      margin-bottom: 8px;
+    }
 `;
 
 export default function Template({ data }) {

@@ -200,4 +200,5 @@ function Layout({ children, hasSider, current, title }) {
   )
 }
 
+export { BREAK_POINT };
 export default Layout;
