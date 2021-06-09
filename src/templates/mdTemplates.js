@@ -16,10 +16,6 @@ const MarkdownContainer = styled.div`
   }
 
   @media (max-width: ${BREAK_POINT}px) {
-    & {
-      font-size: 1.1em;
-    }
-
     p {
       line-height: 140%;
       margin-bottom: 8px;

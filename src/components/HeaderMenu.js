@@ -12,7 +12,7 @@ function HeaderMenu({ current }) {
   const [ selected_key, set_selected_key ] = useState(current);
 
   const handleSelect = ({ key }) => {
-    if (key !== 'cv') {
+    if (key !== 'cv' || key !== 'old-site') {
       set_selected_key(key);
     }
   };
@@ -25,8 +25,11 @@ function HeaderMenu({ current }) {
       <Menu.Item key='home' title='Home'>
         <Link to='/'>Home</Link>
       </Menu.Item>
-      <Menu.Item key='cv' title='CV'>
+      <Menu.Item key='cv' title='View CV'>
         <Link to='/yuxing_cv.pdf'>CV</Link>
+      </Menu.Item>
+      <Menu.Item key='old-site' title='Visit Old Site'>
+        <a href='https://old.yuxingfei.com'>Old Site</a>
       </Menu.Item>
     </StyledMenu>
   )
