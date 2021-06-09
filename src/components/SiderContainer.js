@@ -97,7 +97,7 @@ function SiderContainer() {
           <Tooltip title='Linkedin'>
             <a className='account' 
               rel="noreferrer" 
-              href='https://www.linkedin.com/in/yuxing-fei-5952651b1/' 
+              href='https://www.linkedin.com/in/yuxing-fei/' 
               target='_blank'
             >
               <LinkedinFilled />
