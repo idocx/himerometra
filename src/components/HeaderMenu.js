@@ -8,14 +8,23 @@ const StyledMenu = styled(Menu)`
   border-bottom: none;
 `;
 
-function HeaderMenu({ current }) {
-  const [ selected_key, set_selected_key ] = useState(current);
+function HeaderMenu() {
+  let current_tag;
+  if (typeof window === 'undefined') {
+    current_tag = '';
+  } else if (window.location.pathname === '/') {
+    current_tag = 'home';  // homepage
+  } else {
+    current_tag = /(?<=\/)[^/]+/.exec(window.location.pathname)[0];
+  }
+  const [ selected_key, set_selected_key ] = useState(current_tag);
 
   const handleSelect = ({ key }) => {
     if (key !== 'cv' || key !== 'old-site') {
       set_selected_key(key);
     }
   };
+
   return (
     <StyledMenu mode='horizontal' 
       activeKey={[selected_key]}

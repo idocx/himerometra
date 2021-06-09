@@ -13,4 +13,4 @@ Previously, I was a research intern in [Ceder group](https://ceder.berkeley.edu)
 ## Research Interest
 My research interest mainly focuses on **material informatics** and **automatic synthesis**, that is, teaching computers and robots to think and behave like a scientist.
 
-Feel free to contact me if you are interested in my research.
+Feel free to contact me if you are interested in my research. :wink:

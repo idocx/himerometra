@@ -32,7 +32,7 @@ export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout current={frontmatter.name} hasSider={frontmatter.hasSider} title={frontmatter.title}>
+    <Layout hasSider={frontmatter.hasSider} title={frontmatter.title}>
       <MarkdownContainer
         style={{
           maxWidth: frontmatter.hasSider ? "750px" : "unset"
@@ -51,7 +51,6 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         hasSider
-        name
         title
       }
     }

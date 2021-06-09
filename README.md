@@ -58,7 +58,6 @@ You can just create a new `.md` file to make a new page. The new page should hav
 ```
 ---
 slug: "<the path relative to root for this page>"
-name: "<the name you used as key attribute in header menu>"
 hasSider: <Boolean, whether to add sider component to this page>
 title: "<this will be added to the page's title>"
 ---
@@ -77,7 +76,6 @@ import Layout from '../components/Layout';
 function YourCustomPage() {
   return (
     <Layout 
-      current='<the value you used as key in header menu>' 
       hasSider={"<Boolean, whether to include sider component>"} 
       title="<the title of this page, which will be added to the page's title>"
     >

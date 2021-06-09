@@ -159,7 +159,7 @@ const ContentContainer = styled(LayoutAntd)`
   flex: 1 0 auto;
 `;
 
-function Layout({ children, hasSider, current, title }) {
+function Layout({ children, hasSider, title }) {
   return (
       <LayoutContainer className="layout-container">
         <Halmet>
@@ -187,7 +187,7 @@ function Layout({ children, hasSider, current, title }) {
           <meta name="subject" content="personal web page" />
         </Halmet>
 
-        <Header current={current}></Header>
+        <Header></Header>
         <BackTop />
         <ContentContainer className='main-container'>
           {hasSider ? <Sider /> : null}

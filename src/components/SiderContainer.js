@@ -25,6 +25,11 @@ const SiderDiv = styled.div`
     margin-bottom: 24px;
   }
 
+  .accounts,
+  .emails {
+    margin-left: 0.6em;
+  }
+
   & h1, h2, h3 {
     margin-bottom: 0;
   }
