@@ -9,7 +9,7 @@ Also, Himerometra is also a genus of species that live in the shallow sea. Its C
 <p align="center">Himerometra Robustipinna</p>
 
 ## Demo
-[https://yuxingfei.com](https://yuxingfei.com)
+[![Screenshot](docs/screenshot.png)](https://yuxingfei.com)
 
 ## Installation
 ### Prerequisites
