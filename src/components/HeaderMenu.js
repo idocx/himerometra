@@ -17,6 +17,7 @@ function HeaderMenu() {
   } else {
     current_tag = /(?<=\/)[^/]+/.exec(window.location.pathname)[0];
   }
+
   const [ selected_key, set_selected_key ] = useState(current_tag);
 
   const handleSelect = ({ key }) => {
@@ -28,7 +29,9 @@ function HeaderMenu() {
   return (
     <StyledMenu mode='horizontal' 
       activeKey={[selected_key]}
-      selectedKeys={[selected_key]} 
+      defaultActiveFirst={[selected_key]}
+      selectedKeys={[selected_key]}
+      defaultSelectedKeys={[selected_key]}
       onSelect={handleSelect}
     >
       <Menu.Item key='home' title='Home'>
