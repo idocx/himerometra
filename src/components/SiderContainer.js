@@ -80,7 +80,7 @@ function SiderContainer() {
           Yuxing Fei (<span className='zh-cn'>费宇星</span>)
         </h1>
         <h3 style={{ fontSize: '1.2em' }}>
-          Ph.D. student (1st year)
+          Ph.D. student (2nd year)
         </h3>
         <h4 style={{ fontSize: '1em' }}>
           Department of Material Science and Engineering, UC Berkeley
