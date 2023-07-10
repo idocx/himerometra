@@ -40,9 +40,9 @@ function HeaderMenu() {
       <Menu.Item key='cv' title='View CV'>
         <Link to='/yuxing_cv.pdf'>CV</Link>
       </Menu.Item>
-      <Menu.Item key='old-site' title='Visit Old Site'>
+      {/* <Menu.Item key='old-site' title='Visit Old Site'>
         <a href='https://old.yuxingfei.com'>Old Site</a>
-      </Menu.Item>
+      </Menu.Item> */}
     </StyledMenu>
   )
 }

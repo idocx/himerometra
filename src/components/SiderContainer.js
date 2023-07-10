@@ -80,7 +80,7 @@ function SiderContainer() {
           Yuxing Fei (<span className='zh-cn'>费宇星</span>)
         </h1>
         <h3 style={{ fontSize: '1.2em' }}>
-          Ph.D. student (2nd year)
+          PhD student (3<sup>rd</sup> year)
         </h3>
         <h4 style={{ fontSize: '1em' }}>
           Department of Material Science and Engineering, UC Berkeley
@@ -115,7 +115,7 @@ function SiderContainer() {
         <h3>Email</h3>
         <div className='emails'>
           yuxingfei@berkeley.edu
-          yuxingfei@whu.edu.cn
+          yuxingfei@lbl.gov
         </div>
       </div>
     </SiderDiv>
