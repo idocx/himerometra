@@ -1,12 +1,14 @@
 import React from 'react';
 import photo from '../images/photo.webp'
-import { GithubOutlined, LinkedinFilled } from '@ant-design/icons'; 
+
+import { GithubOutlined, LinkedinFilled, TwitterCircleFilled } from '@ant-design/icons'; 
 import { Tooltip, Divider } from 'antd';
 import styled from 'styled-components';
 
 const SiderDiv = styled.div`
   .accounts {
     font-size: 1.6em;
+
   }
 
   .accounts > a {
@@ -106,6 +108,15 @@ function SiderContainer() {
               target='_blank'
             >
               <LinkedinFilled />
+            </a>
+          </Tooltip>
+          <Tooltip title='Twitter'>
+            <a className='account' 
+              rel="noreferrer" 
+              href='https://twitter.com/yuxing_fei' 
+              target='_blank'
+            >
+              <TwitterCircleFilled />
             </a>
           </Tooltip>
         </div>
