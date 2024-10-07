@@ -33,6 +33,7 @@ function HeaderMenu() {
       selectedKeys={[selected_key]}
       defaultSelectedKeys={[selected_key]}
       onSelect={handleSelect}
+      disabledOverflow
     >
       <Menu.Item key='home' title='Home'>
         <Link to='/'>Home</Link>
